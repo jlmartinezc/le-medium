@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-bold-italic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root {
+    /*  Fonts & font size */
+    font-size: 16px;    
+    --font: 'Roboto', sans-serif; 
+
+    /* color palette */
+    --gray30: #212121;
+    --gray20: #212429;
+    --gray10: #616161;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--gray30);
+    font-family: var(--font);
+}
+
+header {
+    font-size: 14px;
+    color: var(--gray10);
+}
+
+header a {
+    text-decoration: none;
+    color: var(--gray10);
+}
+
+nav details summary {
+    font-weight: bold;
+}
+
+a {
+    color: var(--gray30);
+}
+
+h1 {
+    font-size: 3.75em;
+}
+
+h2 {
+    font-family: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+pre {
+    background: #FEC62E;
+}
+
+.banner {
+    height: 350px;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../multimedia/img/patron.webp');
+}
