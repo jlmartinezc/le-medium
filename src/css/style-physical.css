@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-bold-italic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root {
+    /*  Fonts & font size */
+    font-size: 16px;    
+    --font: 'Roboto', sans-serif; 
+
+    /* color palette */
+    --gray30: #212121;
+    --gray20: #212429;
+    --gray10: #616161;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--gray30);
+    font-family: var(--font);
+}
+
+header {
+    width: 188px;
+    font-size: 14px;
+    position: absolute;
+    color: var(--gray10);
+    top: 64px;
+    left: -232px;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--gray10);
+}
+
+.header {
+    position: sticky;
+    top: 0;
+}
+
+header li {
+    margin-bottom: 16px;
+}
+
+.header-content {
+    position: relative;
+}
+
+.wrapper {
+    width: 902px;
+    margin: auto;
+}
+
+.main-content {
+    background: white;
+}
+
+nav details summary {
+    line-height: 24px;
+    font-weight: bold;
+}
+
+a {
+    color: var(--gray30);
+}
+
+hr {
+    margin: 64px 0;
+}
+
+h1 {
+    font-size: 3.75em;
+    text-align: center;
+    font-weight: normal;
+    margin: 64px 0 16px 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 64px 0 40px;
+    font-weight: normal;
+}
+
+h3 {
+    top: 0;
+    background: white;
+    position: sticky;
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 16px 0 24px 0; 
+}
+
+pre {
+    padding: 40px;
+    line-height: 24px;
+    background: #FEC62E;
+    font-family: var(--font);
+}
+
+blockquote {
+    margin: 32px 0;
+    font-size: 24px;
+    line-height: 24px;
+    padding-left: 16px;
+    border-left: solid 4px var(--gray30);
+}
+
+blockquote span {
+    color: var(--gray10);
+}
+
+blockquote span::before {
+    content: '-';
+}
+
+.banner {
+    height: 350px;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../multimedia/img/patron.webp');
+}
+
+.section-content {
+    margin-top: 164px;
+    counter-reset: titleList;
+}
+
+.section-content:first-of-type {
+    margin: 0;
+}
+
+.section-content + hr {
+    display: none;
+}
+
+.section-content img {
+    margin-top: 40px;
+}
+
+.section-content h3 {
+    padding-bottom: 8px;
+    counter-increment: titleList;
+}
+
+.section-content h3::before {
+    content: counter(titleList, decimal) '. ';
+}
+
+.section-content h3::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: var(--gray30);
+}
+
+.section-content ol li {
+    line-height: 24px;
+}
+
+
+.section-content ul li {
+    margin-top: 16px;
+}

@@ -1,0 +1,245 @@
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-bold-italic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root {
+    /*  Fonts & font size */
+    font-size: 16px;    
+    --font: 'Nunito', sans-serif; 
+
+    /* color palette */
+    --white30: #fff;
+    --white20: #A5A3A5;
+    --white10: #3A3539;
+}
+
+body {
+    color: var(--white30);
+    font-family: var(--font);
+    background: #251F24;
+    margin: 0;
+}
+
+.header-content {
+    padding-inline: 20px;
+}
+
+header {
+    margin-block-start: 20px;
+    font-size: 14px;
+    color: var(--white);
+}
+
+header li {
+    color: var(--white20);
+    margin-block-end: 16px;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--white20);
+}
+
+nav details summary {
+    font-weight: bold;
+}
+
+a {
+    color: var(--white30);
+}
+
+hr {
+    margin-block: 40px;
+    border: 1px solid rgba(97, 97, 97, 0.2);
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+    margin-block-start: 20px;
+    margin-block-end: 16px;
+}
+
+h2 {
+    margin-block: 40px;
+    font-family: 2em;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-block: 16px;
+}
+
+pre {
+    background: var(--white10);
+    padding: 40px;
+    overflow: auto;
+    border-radius: 8px;
+}
+
+p {
+    color: var(--white20);
+}
+
+.banner {
+    block-size: 50px;
+    background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+}
+
+.section-content {
+    counter-reset: titleList;
+}
+
+.section-content img {
+    display: block;
+    margin-block-start: 40px;
+    max-inline-size: 100%;
+}
+
+.section-content h3 {
+    counter-increment: titleList;
+}
+
+.section-content h3::before {
+    content: counter(titleList, decimal) '. ';
+}
+
+blockquote {
+    border-radius: 8px;
+    margin-block-start: 80px;
+    margin-block-end: 63px;
+    background-color: var(--white10);
+    padding: 24px;
+    line-height: 32px;
+    font-size: 24px;
+}
+
+blockquote p {
+    color: var(--white30);
+}
+
+.main hr {
+    display: none;
+}
+
+.wrapper {
+    margin: auto;
+    max-inline-size: 902px;
+}
+
+.main-content {
+    padding-inline: 16px;
+}
+
+.slider-container {
+    display: block;
+    overflow: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.slider-slide .video{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+    text-align: center;
+    margin-block-start: 10px;
+}
+
+.slider-bullet {
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background: white;
+    border-radius: 50%;
+}
+
+.slider-bullet:hover{
+    background: #A5A3A5;
+}
+
+.form input {
+    inline-size: 100%;
+    box-sizing: border-box;
+    background: #251F24;
+    border: 1px solid var(--white30);
+    border-radius: 8px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    font-size: 16px;
+    color: var(--white30);
+    display: block;
+    margin-block-end: 24px;
+}
+
+.form input[type="submit"] {
+    border: none;
+    background: #157EFB;
+}
+
+.form input::-webkit-input-placeholder{
+    color: var(--white20);
+}
+
+@media screen and (min-width: 1366px){
+    .banner {
+        block-size: 350px;
+    }
+    
+    .header {
+        position: sticky;
+        inset-block-start: 0;
+        inset-block-start: -45px;
+    }
+    
+    .header-content {
+        position: relative;
+        inset-block-start: 65px;
+        padding: 0;
+    }
+    
+    header {
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: -208px;
+        inline-size: 188px;
+    }
+
+    h1 {
+        font-size: 60px;
+        margin-block-start: 64px;
+    }
+}
